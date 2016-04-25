@@ -1,0 +1,26 @@
+@mixin hook-table {
+  font-size: 0.8rem;
+  line-height: 0.9rem;
+  margin: 0px 8px;
+  min-width: 30%;
+  &.uk-align-right {
+    text-align: right;
+  }
+}
+
+@mixin hook-accordion-title {
+  color: black !important;
+  font-size: 1.2rem;
+  line-height: 1.3rem;
+  text-align: center;
+}
+
+@mixin hook-article-misc {
+  .uk-article {
+    background: wheat;
+    background: darkorange;
+    color: #060606;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+}
