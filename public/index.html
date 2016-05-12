@@ -9,9 +9,16 @@
 <body >
 <!--<body data-uk-parallax="{: 5}">-->
 <!--<body >-->
+<style>
 
-<div id="bt-popup">
-    
+</style>
+<div id="bt-popup" class="uk-modal">
+    <div class=" uk-modal-dialog uk-modal-dialog-large">
+        <a href="" class="uk-modal-close uk-close uk-close-alt"></a>
+        <a href="#contacts">
+            <img width="100%" src="images/popup.jpg" alt="">
+        </a>
+    </div>
 </div>
 
 <div class="welcome">
@@ -891,11 +898,18 @@
 <script>
 
 $(function(){
-    if(document.cookie.search("popup") === -1 ) {
-        document.cookie = "popup=true";
-        alert("test");
-    }
-    
+    var date = new Date();
+    if(document.cookie.search("popup") === -1 
+      && date.getDate() < 18
+      && date.getMonth() === 4
+      && date.getFullYear() === 2016)  {
+          
+        var modal = UIkit.modal("#bt-popup");
+        var popupTimeout = setTimeout(function(){
+            modal.show();
+        }, 5000);
+        document.cookie="popup=; expires=Fri, 17 May 2016 21:00:00 GMT";
+    }    
 });
 
 </script>
