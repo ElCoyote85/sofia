@@ -204,6 +204,19 @@ body {
 
 // NAVIGATION
 
+.bt-minor-menu {
+  align-items: center;
+  height: 84px;
+  background: black;
+  margin: -20px -20px 0 -20px;
+  // margin-top: 0;
+  // margin-left: 0;
+}
+
+.bt-black-back {
+  background-color: black;
+}
+
 #menu-toggle {
   position: fixed;
   left: 10px;
